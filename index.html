@@ -14,7 +14,7 @@
         color: #0d0d0d;
     }
     h1 {
-        font-size: 14px;
+        font-size: 12px;
     }
     h2 {
         font-size: 10px;
@@ -27,7 +27,7 @@
         font-size: 10px;
     }
     td {
-        vertical-align: middle;
+        vertical-align: top;
         padding: 0 10px 0 0;
     }
     a {
@@ -40,16 +40,33 @@
     .team-row {
         display: flex;
         flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: flex-start;
     }
     .team-member {
         padding: 0.5rem 0.5rem 0.5rem 0;
-        max-width: 150px;
+        min-width: 115px;
+        max-width: 115px;
+        overflow: hidden;
+        line-height: 1.2;
     }
     .team-member h1 {
         word-wrap: normal;
+        line-height: 1.2;
     }
     .team-member img {
-        margin: auto;
+        object-fit: contain;
+
+    }
+    .team-member .img-container {
+        height: 110px;
+        width: 110px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .center-justify {
+        justify-content: center;
     }
 </style>
 </head>
@@ -81,54 +98,70 @@
     <table>
         <tr>
             <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Aidan Dennehy Profile Picture">
+                <div class="img-container">
+                    <img src="https://i.imgur.com/I8ZDmo3.png" alt="Aidan Dennehy Profile Picture">
+                </div>
                 <h1>Aidan Dennehy</h1>
                 <h2 class="sml-text">Art Direction</h2>
                 <p class="sml-text">adennehy@klick.com</p>
             </td>
             <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Liv Cantor Profile Picture">
-                <h1>Liv Cantor</h1>
-                <h2 class="sml-text">Copywriting</h2>
-                <p class="sml-text">lcantor@klick.com</p>
-            </td>
-            <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Amani Youssef Profile Picture">
-                <h1>Amani Youssef</h1>
-                <h2 class="sml-text">Brand Strategy</h2>
-                <p class="sml-text">ayoussef@klick.com</p>
-            </td>
-            <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Calum Balmain-Matthews Profile Picture">
-                <h1>Calum Balmain-Matthews</h1>
-                <h2 class="sml-text">Copywriting</h2>
-                <p class="sml-text">cbalmainmatthews@klick.com</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Eugene Li Profile Picture">
+                <div class="img-container">
+                    <img src="https://i.imgur.com/bixfjsu.png" alt="Eugene Li Profile Picture">
+                </div>
                 <h1>Eugene Li</h1>
                 <h2 class="sml-text">Analytics</h2>
                 <p class="sml-text">eli@klick.com</p>
             </td>
             <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Liam Hogan Profile Picture">
+                <div class="img-container">
+                    <img src="https://i.imgur.com/juui4Sf.png" alt="Amani Youssef Profile Picture">
+                </div>
+                <h1>Amani Youssef</h1>
+                <h2 class="sml-text">Brand Strategy</h2>
+                <p class="sml-text">ayoussef@klick.com</p>
+            </td>
+            <td class="team-member">
+                <div class="img-container center-justify">
+                    <img src="https://i.imgur.com/7imBquF.png" alt="Liam Hogan Profile Picture">
+                </div>
                 <h1>Liam Hogan</h1>
                 <h2 class="sml-text">Quality Assurance</h2>
                 <p class="sml-text">lhogan@klick.com</p>
             </td>
+        </tr>
+        <tr>
             <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="OJ Profile Picture">
-                <h1>OJ</h1>
-                <h2 class="sml-text">Art Direction</h2>
-                <p class="sml-text">gblack@klick.com</p>
+                <div class="img-container">
+                    <img src="https://i.imgur.com/e5cccLN.png" alt="Calum Balmain-Matthews Profile Picture">
+                </div>
+                <h1>Calum Balmain-Matthews</h1>
+                <h2 class="sml-text">Copywriting</h2>
+                <p class="sml-text">cbalmainmatthews@klick.com</p>
             </td>
             <td class="team-member">
-                <img src="https://i.imgur.com/cTjMAS3.png" alt="Apoorva Srikkanth Profile Picture">
+                <div class="img-container">
+                    <img src="https://i.imgur.com/aUemkwc.png" alt="Liv Cantor Profile Picture">
+                </div>
+                <h1>Liv Cantor</h1>
+                <h2 class="sml-text">Copywriting</h2>
+                <p class="sml-text">lcantor@klick.com</p>
+            </td>
+            <td class="team-member">
+                <div class="img-container">
+                    <img src="https://i.imgur.com/OUe27uE.png" alt="Apoorva Srikkanth Profile Picture">
+                </div>
                 <h1>Apoorva Srikkanth</h1>
                 <h2 class="sml-text">CRM Strategy</h2>
                 <p class="sml-text">asrikkanth@klick.com</p>
+            </td>
+            <td class="team-member">
+                <div class="img-container center-justify">
+                    <img src="https://i.imgur.com/1GWNOk0.png" alt="OJ Profile Picture">
+                </div>
+                <h1>OJ</h1>
+                <h2 class="sml-text">Art Direction</h2>
+                <p class="sml-text">gblack@klick.com</p>
             </td>
         </tr>
     </table>
